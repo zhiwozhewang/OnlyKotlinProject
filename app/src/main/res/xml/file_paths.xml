@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--<external-path-->
+        <!--name="files_root"-->
+        <!--path="Android/data/com.coracle.xinao.icrm/" />-->
+    //在文件中添加以下代码
+    <root-path
+        name="root_path"
+        path="." />
+    <external-path
+        name="Download"
+        path="."/>
+    <cache-path name="com.enn.ionic" path="." />
+<!--    <external-path name="sdcard" path="."/>-->
+</paths>

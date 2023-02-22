@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_692"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/im_login_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/login_back"
+        android:layout_width="@dimen/dp_88"
+        android:layout_height="@dimen/dp_88"
+        android:layout_marginTop="@dimen/dp_100"
+        android:background="@mipmap/im_login_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- 短信登录 -->
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_40"
+        android:text="短信登录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_48"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_back" />
+
+    <TextView
+        android:id="@+id/login_title_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_24"
+        android:text="未注册的手机号登录后将自动创建新账号"
+        android:textColor="@color/CDE3FF"
+        android:textSize="@dimen/sp_28"
+        app:layout_constraintStart_toStartOf="@+id/login_title"
+        app:layout_constraintTop_toBottomOf="@+id/login_title" />
+
+    <View
+        android:id="@+id/login_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_66"
+        android:background="@drawable/bg_top_round_corner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_title_tip" />
+
+    <include
+        android:id="@+id/login_code_ic"
+        layout="@layout/ic_login_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/login_view" />
+
+    <ViewStub
+        android:id="@+id/login_pw_vs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_64"
+        android:inflatedId="@id/login_pw_vs"
+        android:layout="@layout/vs_login_pw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/login_view" />
+
+    <View
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginLeft="@dimen/dp_48"
+        android:layout_marginRight="@dimen/dp_24"
+        android:background="@color/color_999999"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/login_wechat_text"
+        app:layout_constraintEnd_toStartOf="@+id/login_wechat_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/login_wechat_text" />
+
+
+    <TextView
+        android:id="@+id/login_wechat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:text="第三方账号登录"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/sp_24"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/login_wechat_im"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0_5"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginRight="@dimen/dp_48"
+        android:background="@color/color_999999"
+
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/login_wechat_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/login_wechat_text"
+        app:layout_constraintTop_toTopOf="@+id/login_wechat_text" />
+
+    <ImageView
+        android:id="@+id/login_wechat_im"
+        android:layout_width="@dimen/dp_88"
+        android:layout_height="@dimen/dp_88"
+        android:layout_marginBottom="@dimen/dp_48"
+
+        android:src="@mipmap/im_login_wechat"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/login_agreement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/login_agreement_check"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/selector_agree_check"
+        android:button="@null"
+        app:layout_constraintRight_toLeftOf="@+id/login_agreement"
+        app:layout_constraintTop_toTopOf="@+id/login_agreement" />
+
+    <TextView
+        android:id="@+id/login_agreement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_80"
+        android:layout_marginRight="@dimen/dp_80"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:gravity="top|center_horizontal"
+        android:lineSpacingExtra="@dimen/dp_6"
+        android:text="我已阅读并同意《新奥慧用能APP用户使用协议》、《隐私政策》、《认证服务条款》"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

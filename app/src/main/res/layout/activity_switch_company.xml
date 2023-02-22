@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/switch_company_fr"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_88"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/switch_company_back"
+            android:layout_width="@dimen/dp_88"
+            android:layout_height="@dimen/dp_88"
+            android:layout_gravity="left|center_vertical"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            android:id="@+id/switch_company_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="切换公司"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_36" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/switch_company_im"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_28"
+        android:src="@mipmap/im_now_company"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_company_fr" />
+
+    <TextView
+        android:id="@+id/switch_company_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:text="当前公司"
+        android:textColor="@color/color_0473FF"
+        android:textSize="@dimen/sp_28"
+        app:layout_constraintBottom_toBottomOf="@+id/switch_company_im"
+        app:layout_constraintStart_toEndOf="@+id/switch_company_im"
+        app:layout_constraintTop_toTopOf="@+id/switch_company_im" />
+
+    <TextView
+        android:id="@+id/switch_company_nowcompany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_24"
+        android:paddingBottom="@dimen/dp_32"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_32"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_company_im" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/dp_38"
+        android:paddingLeft="@dimen/dp_24"
+        android:paddingBottom="@dimen/dp_24"
+        android:paddingRight="@dimen/dp_24"
+        android:background="@color/F7FAFF"
+        app:constraint_referenced_ids="switch_company_allcompany,switch_company_recy,switch_company_btn" />
+
+    <TextView
+        android:id="@+id/switch_company_allcompany"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginRight="@dimen/dp_24"
+        android:text="全部公司"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/sp_28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_company_nowcompany" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/switch_company_recy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:background="@drawable/bg_round_corner"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginRight="@dimen/dp_24"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/switch_company_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_company_allcompany"
+        tools:listitem="@layout/item_switch_company" />
+
+
+    <Button
+        android:id="@+id/switch_company_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_88"
+        android:layout_marginLeft="@dimen/dp_48"
+        android:layout_marginRight="@dimen/dp_48"
+        android:background="@drawable/bg_login_btn"
+        android:gravity="center"
+        android:text="绑定其他公司"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_36"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

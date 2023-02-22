@@ -1,0 +1,126 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs'
+    id 'newlens'
+}
+
+android {
+    def android = rootProject.ext.android
+
+    defaultConfig {
+        applicationId "com.enn.ionic"
+        compileSdk android.compileSdkVersion
+        minSdk android.minSdkVersion
+        targetSdk android.targetSdkVersion
+        versionCode android.versionCode
+        versionName android.versionName
+        renderscriptTargetApi 21
+        renderscriptSupportModeEnabled true
+    }
+    signingConfigs {
+        debug {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('../sign.keystore')
+            storePassword 'android'
+
+        }
+    }
+    buildTypes {
+
+        debug {
+            buildConfigField("String", "BASE_UPDATE_URL", "\"https://cmtest.enn.cn:4443/\"")
+            buildConfigField("String", "BASE_ZHFX_URL", "\"https://sg.enn.cn/htapi/api/v1/test/\"")
+            buildConfigField("String", "KEY_TINGYUN", "\"e062cbe1a81c4e2b926df9fc1feda2b0\"")
+            debuggable true
+            zipAlignEnabled false
+            minifyEnabled false //是否混淆
+            shrinkResources false //是否去除无效的资源文件
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            buildConfigField("String", "BASE_UPDATE_URL", "\"https://cmtest.enn.cn:4443/\"")
+            buildConfigField("String", "BASE_ZHFX_URL", "\"https://sg.enn.cn/htapi/api/v1/test/\"")
+            buildConfigField("String", "KEY_TINGYUN", "\"e062cbe1a81c4e2b926df9fc1feda2b0\"")
+            debuggable false
+            zipAlignEnabled true
+            minifyEnabled false //是否混淆
+            shrinkResources false //是否去除无效的资源文件
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                Calendar calendar = Calendar.getInstance(Locale.CHINA);
+                def buildDate = String.format(Locale.CHINA, "%04d%02d%02d",
+                        calendar.get(Calendar.YEAR),
+                        calendar.get(Calendar.MONTH) + 1,
+                        calendar.get(Calendar.DAY_OF_MONTH))
+                def versionName = defaultConfig.versionName
+                def versionCode = defaultConfig.versionCode
+                //项目名-版本名-版本号-release/debug.apk
+                switch (variant.buildType.name) {
+                    case "release":
+                        outputFileName = "${project.archivesBaseName}-v${versionName}-c${versionCode}-${buildDate}-release.apk"
+                        break
+                    case "debug":
+                        outputFileName = "${project.archivesBaseName}-v${versionName}-c${versionCode}-${buildDate}-debug.apk"
+                        break
+                }
+            }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    viewBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.test.ext:junit-ktx:1.1.3'
+    testImplementation 'org.testng:testng:6.9.6'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    rootProject.ext.GoogleDepend.each { k, v -> api v }
+    rootProject.ext.Refresh.each { k, v -> api v }
+    implementation project(path: ':base')
+    implementation project(path: ':network')
+    implementation project(path: ':mlkit-barcode-scanning')
+
+    implementation(project.ThirdDepend.viewbindingdelegate)
+    implementation(project.ThirdDepend.adapter)
+
+//    def nav_version = "2.4.2"
+//    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+//    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    implementation(project.AppPay.pay_wechat)
+    implementation(project.ThirdDepend.banner)
+    implementation(project.ThirdDepend.coil)
+    implementation(project.ThirdDepend.pictureselector)
+    implementation(project.ThirdDepend.compress)
+    implementation(project.ThirdDepend.permission)
+    implementation(project.ThirdDepend.tbs)
+    implementation(project.ThirdDepend.imageviewer)
+    implementation(project.ThirdDepend.amap)
+    implementation(project.ThirdDepend.ucrop)
+    implementation(project.ThirdDepend.glide)
+    annotationProcessor(project.ThirdDepend.glide_annotation)
+    implementation fileTree(dir: "${rootDir}/TY_EA_Rewriter", include: ['*.jar'])
+//    implementation(project.ThirdDepend.aspectjx)
+
+}

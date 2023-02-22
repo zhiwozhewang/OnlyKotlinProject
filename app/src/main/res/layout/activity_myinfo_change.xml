@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/F7FAFF">
+
+    <FrameLayout
+        android:id="@+id/info_change_fr"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_92"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/info_change_back"
+            android:layout_width="@dimen/dp_88"
+            android:layout_height="@dimen/dp_88"
+            android:layout_gravity="left|center_vertical"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            android:id="@+id/info_change_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_36" />
+
+        <TextView
+            android:id="@+id/info_change_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/dp_24"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/color_0473FF"
+            android:textSize="@dimen/sp_36" />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/info_change_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_24"
+        android:background="@mipmap/im_bg_mine_item"
+        android:ellipsize="end"
+        android:hint="请输入要修改的内容"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLength="10"
+        android:paddingLeft="@dimen/dp_24"
+        android:paddingTop="@dimen/dp_30"
+        android:paddingBottom="@dimen/dp_30"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_28"
+        android:theme="@style/Login_Edit"
+        app:layout_constraintTop_toBottomOf="@+id/info_change_fr" />
+
+    <TextView
+        android:id="@+id/info_change_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_25"
+        android:text="1/10"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/sp_24"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/info_change_edit"
+        app:layout_constraintEnd_toStartOf="@+id/info_change_delete"
+        app:layout_constraintTop_toTopOf="@+id/info_change_edit" />
+
+    <ImageView
+        android:id="@+id/info_change_delete"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_24"
+        android:background="@mipmap/im_pw_delete"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/info_change_edit"
+        app:layout_constraintEnd_toEndOf="@+id/info_change_edit"
+        app:layout_constraintTop_toTopOf="@+id/info_change_edit" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/info_change_btn1"-->
+    <!--        android:layout_width="@dimen/dp_339"-->
+    <!--        android:layout_height="@dimen/dp_88"-->
+    <!--        android:layout_marginLeft="@dimen/dp_24"-->
+    <!--        android:layout_marginBottom="@dimen/dp_92"-->
+    <!--        android:background="@drawable/bg_login_btn_no"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="取消"-->
+    <!--        android:textColor="@color/color_0473FF"-->
+    <!--        android:textSize="@dimen/sp_36"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/info_change_btn2"-->
+    <!--        android:layout_width="@dimen/dp_339"-->
+    <!--        android:layout_height="@dimen/dp_88"-->
+    <!--        android:layout_marginRight="@dimen/dp_24"-->
+    <!--        android:layout_marginBottom="@dimen/dp_92"-->
+    <!--        android:background="@drawable/bg_login_btn_notext"-->
+    <!--        android:gravity="center"-->
+    <!--        android:text="确定"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="@dimen/sp_36"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_32"
+        android:background="@drawable/bg_round_corner"
+        android:padding="@dimen/dp_20">
+
+        <ImageView
+            android:id="@+id/item_account_check_im"
+            android:layout_width="@dimen/dp_72"
+            android:layout_height="@dimen/dp_72"
+            android:src="@mipmap/im_mine_head"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_account_check_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:gravity="center"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_32"
+            app:layout_constraintBottom_toBottomOf="@+id/item_account_check_im"
+            app:layout_constraintStart_toEndOf="@+id/item_account_check_im"
+            app:layout_constraintTop_toTopOf="@+id/item_account_check_im" />
+
+        <TextView
+            android:id="@+id/item_account_check_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_32"
+            app:layout_constraintBottom_toBottomOf="@+id/item_account_check_im"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_account_check_im" />
+
+        <View
+            android:id="@+id/item_mine_line"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@color/E5E5E5"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_account_check_im" />
+
+        <TextView
+            android:id="@+id/item_account_check_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_44"
+            android:gravity="center"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintStart_toStartOf="@+id/item_account_check_im"
+            app:layout_constraintTop_toBottomOf="@+id/item_account_check_im" />
+
+        <TextView
+            android:id="@+id/item_account_check_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintBottom_toBottomOf="@+id/item_account_check_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_account_check_time" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/item_account_check_btngroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="item_account_check_btn1,item_account_check_btn2" />
+
+        <TextView
+            android:id="@+id/item_account_check_btn1"
+            android:layout_width="@dimen/dp_144"
+            android:layout_height="@dimen/dp_56"
+            android:layout_marginRight="@dimen/dp_32"
+            android:background="@drawable/bg_check_btn_no"
+            android:gravity="center"
+            android:text="拒绝"
+            android:textColor="@color/color_0473FF"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintBottom_toBottomOf="@+id/item_account_check_time"
+            app:layout_constraintEnd_toStartOf="@+id/item_account_check_btn2"
+            app:layout_constraintTop_toTopOf="@+id/item_account_check_time" />
+
+        <TextView
+            android:id="@+id/item_account_check_btn2"
+            android:layout_width="@dimen/dp_144"
+            android:layout_height="@dimen/dp_56"
+            android:background="@drawable/bg_check_btn_yes"
+            android:gravity="center"
+            android:text="通过"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintBottom_toBottomOf="@+id/item_account_check_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_account_check_time" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_32"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_account_check_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_right_delete"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_36" />
+    </LinearLayout>
+</LinearLayout>

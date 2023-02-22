@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "crm-app-android"
+include ':app'
+include ':network'
+include ':base'
+include ':mlkit-barcode-scanning'

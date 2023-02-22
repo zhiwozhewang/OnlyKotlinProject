@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 圆角 -->
+    <corners android:radius="@dimen/dp_28" /><!-- 设置圆角半径 -->
+    <!-- 填充 -->
+    <solid android:color="@color/color_0473FF" /><!-- 填充的颜色 -->
+</shape>
+
+
+<!--<vector xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:aapt="http://schemas.android.com/aapt"-->
+<!--    android:width="96dp"-->
+<!--    android:height="56dp"-->
+<!--    android:viewportWidth="96"-->
+<!--    android:viewportHeight="56">-->
+
+<!--    <group>-->
+
+<!--        <clip-path android:pathData="M28 0H68C83.464 0 96 12.536 96 28C96 43.464 83.464 56 68 56H28C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0Z" />-->
+
+<!--        <path-->
+<!--            android:fillColor="#0473FF"-->
+<!--            android:pathData="M0 0V56H96V0" />-->
+
+<!--    </group>-->
+
+<!--</vector>-->

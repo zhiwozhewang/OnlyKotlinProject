@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/first_todo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/im_bg_todo"
+    android:paddingLeft="@dimen/dp_24"
+    android:paddingTop="@dimen/dp_32"
+    android:paddingRight="@dimen/dp_24"
+    android:paddingBottom="@dimen/dp_32"
+    android:translationZ="@dimen/dp_4">
+
+    <ImageView
+        android:id="@+id/todo_left_im"
+        android:layout_width="@dimen/dp_74"
+        android:layout_height="@dimen/dp_80"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/im_first_todo_tip" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_toStartOf="@+id/todo_right_im"
+        android:layout_toEndOf="@+id/todo_left_im"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/todo_text1_re"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/todo_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_toStartOf="@+id/todo_text1_rtext"
+                android:ellipsize="end"
+                android:gravity="top"
+                android:lines="1"
+                android:maxEms="12"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_28" />
+
+            <TextView
+                android:id="@+id/todo_text1_rtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_100"
+                android:gravity="top"
+                android:textColor="@color/color_BFBFBF"
+                android:textSize="@dimen/sp_28" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/todo_text2_re"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/todo_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_toStartOf="@+id/todo_text2_rtext"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                android:lines="1"
+                android:maxEms="12"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_28" />
+
+            <TextView
+                android:id="@+id/todo_text2_rtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_100"
+                android:gravity="top"
+                android:textColor="@color/color_BFBFBF"
+                android:textSize="@dimen/sp_28" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/todo_right_im"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_toLeftOf="@+id/todo_right_im_to"
+        android:background="@mipmap/im_first_todo_circle" />
+
+    <ImageView
+        android:id="@+id/todo_right_im_to"
+        android:layout_width="@dimen/dp_44"
+        android:layout_height="@dimen/dp_44"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/im_mine_to" />
+
+</RelativeLayout>

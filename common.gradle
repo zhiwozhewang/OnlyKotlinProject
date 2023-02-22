@@ -1,0 +1,28 @@
+apply plugin:'com.android.library'
+apply plugin:'kotlin-android'
+
+android {
+    def android = rootProject.ext.android
+    
+    defaultConfig {
+        multiDexEnabled true
+        minSdk android.minSdkVersion
+        compileSdk android.compileSdkVersion
+        targetSdk android.targetSdkVersion
+        versionCode android.versionCode
+        versionName android.versionName
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    viewBinding {
+        enabled = true
+    }
+}

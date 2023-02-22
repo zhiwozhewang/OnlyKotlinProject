@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sp_11">11mm</dimen>
+    <dimen name="sp_12">12mm</dimen>
+    <dimen name="sp_14">14mm</dimen>
+    <dimen name="sp_16">16mm</dimen>
+    <dimen name="sp_18">18mm</dimen>
+    <dimen name="sp_20">20mm</dimen>
+    <dimen name="sp_24">24mm</dimen>
+    <dimen name="sp_28">28mm</dimen>
+    <dimen name="sp_32">32mm</dimen>
+    <dimen name="sp_36">36mm</dimen>
+    <dimen name="sp_40">40mm</dimen>
+    <dimen name="sp_48">48mm</dimen>
+
+    <dimen name="dp_0">0mm</dimen>
+    <dimen name="dp_0_5">0.5mm</dimen>
+    <dimen name="dp_1">1mm</dimen>
+    <dimen name="dp_2">2mm</dimen>
+    <dimen name="dp_3">3mm</dimen>
+    <dimen name="dp_4">4mm</dimen>
+    <dimen name="dp_5">5mm</dimen>
+    <dimen name="dp_6">6mm</dimen>
+    <dimen name="dp_8">8mm</dimen>
+    <dimen name="dp_10">10mm</dimen>
+    <dimen name="dp_12">12mm</dimen>
+    <dimen name="dp_14">14mm</dimen>
+    <dimen name="dp_15">15mm</dimen>
+    <dimen name="dp_16">16mm</dimen>
+    <dimen name="dp_18">18mm</dimen>
+    <dimen name="dp_19">19mm</dimen>
+    <dimen name="dp_20">20mm</dimen>
+    <dimen name="dp_22">22mm</dimen>
+    <dimen name="dp_26">26mm</dimen>
+    <dimen name="dp_28">28mm</dimen>
+    <dimen name="dp_25">25mm</dimen>
+    <dimen name="dp_24">24mm</dimen>
+    <dimen name="dp_30">30mm</dimen>
+    <dimen name="dp_32">32mm</dimen>
+    <dimen name="dp_32_n">-32mm</dimen>
+    <dimen name="dp_34">34mm</dimen>
+    <dimen name="dp_36">36mm</dimen>
+    <dimen name="dp_38">38mm</dimen>
+    <dimen name="dp_39">39mm</dimen>
+
+    <dimen name="dp_40">40mm</dimen>
+    <dimen name="dp_43">43mm</dimen>
+    <dimen name="dp_44">44mm</dimen>
+    <dimen name="dp_48">48mm</dimen>
+    <dimen name="dp_50">50mm</dimen>
+    <dimen name="dp_52">52mm</dimen>
+    <dimen name="dp_54">54mm</dimen>
+    <dimen name="dp_56">56mm</dimen>
+    <dimen name="dp_60">60mm</dimen>
+    <dimen name="dp_66">66mm</dimen>
+    <dimen name="dp_68">68mm</dimen>
+
+    <dimen name="dp_64">64mm</dimen>
+    <dimen name="dp_72">72mm</dimen>
+    <dimen name="dp_74">74mm</dimen>
+    <dimen name="dp_76">76mm</dimen>
+    <dimen name="dp_80">80mm</dimen>
+    <dimen name="dp_88">88mm</dimen>
+    <dimen name="dp_92">92mm</dimen>
+    <dimen name="dp_98">98mm</dimen>
+    <dimen name="dp_100">100mm</dimen>
+    <dimen name="dp_110">110mm</dimen>
+    <dimen name="dp_144">144mm</dimen>
+    <dimen name="dp_105">105mm</dimen>
+    <dimen name="dp_116">116mm</dimen>
+    <dimen name="dp_118">118mm</dimen>
+    <dimen name="dp_120">120mm</dimen>
+    <dimen name="dp_130">130mm</dimen>
+    <dimen name="dp_136">136mm</dimen>
+    <dimen name="dp_140">140mm</dimen>
+    <dimen name="dp_150">150mm</dimen>
+    <dimen name="dp_160">160mm</dimen>
+    <dimen name="dp_170">170mm</dimen>
+    <dimen name="dp_180">180mm</dimen>
+    <dimen name="dp_185">185mm</dimen>
+    <dimen name="dp_198">198mm</dimen>
+    <dimen name="dp_200">200mm</dimen>
+    <dimen name="dp_210">210mm</dimen>
+
+    <dimen name="dp_240">240mm</dimen>
+    <dimen name="dp_265">265mm</dimen>
+    <dimen name="dp_275">275mm</dimen>
+    <dimen name="dp_280">280mm</dimen>
+    <dimen name="dp_400">400mm</dimen>
+    <dimen name="dp_411">411mm</dimen>
+    <dimen name="dp_319">319mm</dimen>
+    <dimen name="dp_433">433mm</dimen>
+    <dimen name="dp_461">461mm</dimen>
+    <dimen name="dp_339">339mm</dimen>
+    <dimen name="dp_220">220mm</dimen>
+    <dimen name="dp_224">224mm</dimen>
+    <dimen name="dp_263">263mm</dimen>
+
+    <dimen name="dp_300">300mm</dimen>
+    <dimen name="dp_324">324mm</dimen>
+
+    <dimen name="dp_340">340mm</dimen>
+    <dimen name="dp_702">702mm</dimen>
+    <dimen name="dp_492">492mm</dimen>
+    <dimen name="dp_292">292mm</dimen>
+    <dimen name="dp_231">231mm</dimen>
+    <dimen name="dp_380">380mm</dimen>
+
+    <dimen name="dp_531">531mm</dimen>
+    <dimen name="dp_516">516mm</dimen>
+    <dimen name="dp_540">540mm</dimen>
+    <dimen name="dp_295">295mm</dimen>
+
+    <dimen name="dp_750">750mm</dimen>
+    <dimen name="dp_608">608mm</dimen>
+    <dimen name="dp_647">647mm</dimen>
+    <dimen name="dp_692">692mm</dimen>
+    <dimen name="dp_880">880mm</dimen>
+    <dimen name="dp_928">928mm</dimen>
+
+</resources>

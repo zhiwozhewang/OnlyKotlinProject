@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/F7FAFF">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_411"
+        android:background="@mipmap/im_mine_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/bind_company_result_back"
+        android:layout_width="@dimen/dp_88"
+        android:layout_height="@dimen/dp_88"
+        android:layout_marginTop="@dimen/dp_100"
+        android:background="@mipmap/im_login_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- 短信登录 -->
+    <TextView
+        android:id="@+id/bind_company_result_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="企业认证"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_36"
+        app:layout_constraintBottom_toBottomOf="@+id/bind_company_result_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bind_company_result_back" />
+
+    <EditText
+        android:id="@+id/bind_company_result_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_38"
+        android:layout_marginRight="@dimen/dp_24"
+        android:background="@drawable/bg_round_corner"
+        android:hint="请输入表钢号/用户编号/客户项目编码"
+        android:imeOptions="actionSearch"
+        android:maxLength="30"
+        android:paddingLeft="@dimen/dp_24"
+        android:paddingTop="@dimen/dp_28"
+        android:paddingRight="@dimen/dp_24"
+        android:paddingBottom="@dimen/dp_28"
+        android:singleLine="true"
+        android:textColorHint="@color/color_999999"
+        android:textSize="@dimen/sp_28"
+        app:layout_constraintTop_toBottomOf="@+id/bind_company_result_title" />
+
+    <ImageView
+        android:id="@+id/bind_company_result_delete"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:background="@mipmap/im_pw_delete"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/bind_company_result_edit"
+        app:layout_constraintEnd_toStartOf="@+id/bind_company_result_search"
+        app:layout_constraintTop_toTopOf="@+id/bind_company_result_edit" />
+
+    <TextView
+        android:id="@+id/bind_company_result_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_28"
+        android:text="搜索"
+        android:textColor="@color/color_0473FF"
+        android:textSize="@dimen/sp_28"
+        app:layout_constraintBottom_toBottomOf="@+id/bind_company_result_edit"
+        app:layout_constraintEnd_toEndOf="@+id/bind_company_result_edit"
+        app:layout_constraintTop_toTopOf="@+id/bind_company_result_edit" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bind_company_result_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="bind_company_result_search,bind_company_result_delete,bind_company_result_edit" />
+
+    <include
+        android:id="@+id/bind_company_result_has_ic"
+        layout="@layout/item_company_result_has"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/bind_company_result_title" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bind_company_result_no_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="bind_company_result_no_im,bind_company_result_no_text1,bind_company_result_no_text2" />
+
+    <ImageView
+        android:id="@+id/bind_company_result_no_im"
+        android:layout_width="@dimen/dp_220"
+        android:layout_height="@dimen/dp_220"
+        android:src="@mipmap/im_bind_company_qury_no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bind_company_result_no_text1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_32"
+        android:text="没找到相关信息"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bind_company_result_no_im" />
+
+    <TextView
+        android:id="@+id/bind_company_result_no_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="请确认后输入或联系客户经理"
+        android:textColor="@color/color_BFBFBF"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bind_company_result_no_text1" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bind_company_result_btn_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="bind_company_result_btn1,bind_company_result_btn2" />
+
+    <TextView
+        android:id="@+id/bind_company_result_btn1"
+        android:layout_width="@dimen/dp_339"
+        android:layout_height="@dimen/dp_88"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_64"
+        android:layout_marginRight="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_92"
+        android:background="@drawable/bg_login_btn_no"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/color_0473FF"
+        android:textSize="@dimen/sp_36"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/bind_company_result_btn2"
+        android:layout_width="@dimen/dp_339"
+        android:layout_height="@dimen/dp_88"
+        android:layout_marginLeft="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_64"
+        android:layout_marginRight="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_92"
+        android:background="@drawable/bg_login_btn"
+        android:gravity="center"
+        android:text="绑定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_36"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

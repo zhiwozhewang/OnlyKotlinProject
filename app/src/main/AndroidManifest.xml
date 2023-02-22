@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.enn.ionic">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.REPLACE_EXISTING_PACKAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!--支付权限-->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!--如果设置了target >= 28 如果需要启动后台定位则必须声明这个权限-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!--如果您的应用需要后台定位权限，且有可能运行在Android Q设备上,并且设置了target>28，必须增加这个权限声明-->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <queries>
+        <package android:name="com.eg.android.AlipayGphone" /> <!-- 支付宝 -->
+        <package android:name="hk.alipay.wallet" /> <!-- AlipayHK -->
+    </queries>
+    <queries>
+        <package android:name="com.tencent.mm" />
+    </queries>
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <intent>
+            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".App"
+        android:icon="@mipmap/im_about_icon"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Crmappandroid"
+        android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="750" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="1624" />
+        <!--        <meta-data-->
+        <!--            android:name="design_width_in_dp"-->
+        <!--            android:value="850" />-->
+        <!--        <meta-data-->
+        <!--            android:name="design_height_in_dp"-->
+        <!--            android:value="1840" />-->
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="8dbb1367f30845aa4a95387aa12aa04c" />
+
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Splash"
+            android:windowSoftInputMode="stateHidden|stateUnchanged">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--微信支付appid-->
+                <data android:scheme="wxdacde0b5969f4641" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.WebActivityNew"
+            android:launchMode="singleTop"
+
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.QRCodeScanningActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CameraScanTheme" />
+        <activity
+            android:name=".ui.activity.FindPwActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.BindPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.QRCodeResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CompanyBindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CompanyBindResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyInfoChangeActivity"
+            android:screenOrientation="portrait"
+
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".ui.activity.MyAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MySetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AccountTransferActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SwitchCompanyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AccountCheckActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.MyAboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.fragment.UtilsActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="com.tencent.smtt.utils.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service android:name="com.amap.api.location.APSService" />
+    </application>
+
+</manifest>

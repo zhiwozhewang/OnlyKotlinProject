@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.enn.ionic.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+<!--        <action-->
+<!--            android:id="@+id/action_mainFragment_to_loginFragment"-->
+<!--            app:destination="@id/loginFragment" />-->
+        <action
+            android:id="@+id/action_mainFragment_to_utilsFragment"
+            app:destination="@id/utilsFragment" />
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/loginFragment"-->
+<!--        android:name="com.enn.ionic.ui.activity.LoginFragment"-->
+<!--        android:label="fragment_login" />-->
+    <fragment
+        android:id="@+id/utilsFragment"
+        android:name="com.enn.ionic.ui.fragment.UtilsActivity"
+        android:label="fragment_utils"
+        tools:layout="@layout/fragment_utils">
+        <argument
+            android:name="firstUtils"
+            android:defaultValue="@null"
+            app:argType="java.util.ArrayList"
+            app:nullable="true" />
+    </fragment>
+
+</navigation>

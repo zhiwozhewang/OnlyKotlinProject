@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_32"
+        android:paddingBottom="@dimen/dp_32">
+
+        <TextView
+            android:id="@+id/re_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐套餐"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_32" />
+
+        <TextView
+            android:id="@+id/re_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:drawableRight="@color/color_666666"
+            android:text="更多"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_28" />
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/re_recy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:spanCount="4"
+        tools:listitem="@layout/item_first_grid" />
+
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+apply from: "../basic.gradle"
+
+dependencies {
+    api(project.ThirdDepend.camera)
+    api(project.GoogleDepend.mlkit_barcode)
+}

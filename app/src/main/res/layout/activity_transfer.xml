@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/F7FAFF">
+
+    <FrameLayout
+        android:id="@+id/transfer_fr"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_92"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/transfer_back"
+            android:layout_width="@dimen/dp_88"
+            android:layout_height="@dimen/dp_88"
+            android:layout_gravity="left|center_vertical"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            android:id="@+id/transfer_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="转让主账号身份"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_36" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/transfer_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_28"
+        android:text="转让主账号后，您将成为普通员工。"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/sp_28"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transfer_fr" />
+
+    <View
+        android:id="@+id/transfer_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_68"
+        android:layout_margin="@dimen/dp_24"
+        android:background="@drawable/bg_transfer_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transfer_tip" />
+
+    <ImageView
+        android:id="@+id/transfer_edit_im"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:background="@mipmap/im_transfer_search"
+        app:layout_constraintBottom_toBottomOf="@+id/transfer_view"
+        app:layout_constraintStart_toStartOf="@+id/transfer_view"
+        app:layout_constraintTop_toTopOf="@+id/transfer_view" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/transfer_edit"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:background="@android:color/transparent"
+        android:hint="请输入账号名/电话"
+        android:padding="@dimen/dp_10"
+        android:imeOptions="actionSearch"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_28"
+        app:layout_constraintBottom_toBottomOf="@+id/transfer_view"
+        app:layout_constraintStart_toEndOf="@+id/transfer_edit_im"
+        app:layout_constraintEnd_toStartOf="@+id/transfer_edit_delete"
+        app:layout_constraintTop_toTopOf="@+id/transfer_view" />
+
+    <ImageView
+        android:id="@+id/transfer_edit_delete"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_24"
+        android:background="@mipmap/im_pw_delete"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/transfer_view"
+        app:layout_constraintEnd_toEndOf="@+id/transfer_view"
+        app:layout_constraintTop_toTopOf="@+id/transfer_view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transfer_recy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_24"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transfer_view"
+        tools:listitem="@layout/item_transfer_account" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/transfer_no_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="transfer_no_im,transfer_no_text" />
+
+    <ImageView
+        android:id="@+id/transfer_no_im"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_105"
+        android:layout_marginTop="@dimen/dp_210"
+        android:background="@mipmap/im_transfer_no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transfer_view" />
+
+    <TextView
+        android:id="@+id/transfer_no_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_32"
+        android:text="暂无此账号"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transfer_no_im" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

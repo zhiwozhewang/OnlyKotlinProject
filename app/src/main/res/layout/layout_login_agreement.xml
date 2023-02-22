@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@drawable/bg_top_round_corner"
+    android:paddingBottom="@dimen/dp_30">
+
+
+    <TextView
+        android:id="@+id/login_agreement_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:text="请阅读并同意以下条款"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_32"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/login_agreement_close"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_48"
+        android:background="@mipmap/im_login_dialog_close"
+        app:layout_constraintBottom_toBottomOf="@id/login_agreement_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/login_agreement_title" />
+
+    <TextView
+        android:id="@+id/login_agreement_tip"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_100"
+        android:layout_marginTop="@dimen/dp_80"
+        android:layout_marginRight="@dimen/dp_100"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="@dimen/dp_3"
+        android:text="《新奥慧用能APP用户使用协议》、《隐私政策》、《认证服务条款》"
+        android:textColor="@color/color_0473FF"
+        android:textSize="@dimen/sp_28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_agreement_title" />
+
+    <Button
+        android:id="@+id/login_agreement_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_88"
+        android:layout_marginLeft="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_48"
+        android:layout_marginRight="@dimen/dp_48"
+        android:background="@drawable/bg_login_btn"
+        android:gravity="center"
+        android:text="同意并继续"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_agreement_tip" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/item_gas_balance_cl"
+
+    android:background="@mipmap/im_banner_gas_blue"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_24">
+
+
+    <TextView
+        android:id="@+id/item_gas_balance_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="余额（元）"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_gas_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_48"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_gas_balance_text" />
+
+    <TextView
+        android:id="@+id/item_gas_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_gas_balance" />
+
+    <ImageView
+        android:id="@+id/item_gas_im"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:src="@mipmap/im_gas_tab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_gas_day" />
+
+    <TextView
+        android:id="@+id/item_gas_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintBottom_toBottomOf="@+id/item_gas_im"
+        app:layout_constraintStart_toEndOf="@+id/item_gas_im"
+        app:layout_constraintTop_toTopOf="@+id/item_gas_im" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

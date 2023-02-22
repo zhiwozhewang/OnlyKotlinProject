@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/F7FAFF">
+
+    <ImageView
+        android:id="@+id/scan_result_close"
+        android:layout_width="@dimen/dp_88"
+        android:layout_height="@dimen/dp_88"
+        android:layout_marginTop="@dimen/dp_80"
+        android:src="@mipmap/icon_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/scan_result_view"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_531"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:background="@mipmap/im_bg_mine_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scan_result_close" />
+
+    <ImageView
+        android:id="@+id/scan_result_im"
+        android:layout_width="@dimen/dp_140"
+        android:layout_height="@dimen/dp_140"
+        android:src="@mipmap/im_scan_result_sucess"
+        app:layout_constraintBottom_toBottomOf="@+id/scan_result_view"
+        app:layout_constraintEnd_toEndOf="@+id/scan_result_view"
+        app:layout_constraintStart_toStartOf="@+id/scan_result_view"
+        app:layout_constraintTop_toTopOf="@+id/scan_result_view" />
+
+    <TextView
+        android:id="@+id/scan_result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_25"
+        android:text="已成功登录"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_32"
+        app:layout_constraintEnd_toEndOf="@+id/scan_result_im"
+        app:layout_constraintStart_toStartOf="@+id/scan_result_im"
+        app:layout_constraintTop_toBottomOf="@+id/scan_result_im" />
+
+    <Button
+        android:id="@+id/scan_result_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_88"
+        android:layout_marginLeft="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_64"
+        android:layout_marginRight="@dimen/dp_48"
+        android:layout_marginBottom="@dimen/dp_100"
+        android:background="@drawable/bg_login_btn"
+        android:gravity="center"
+        android:text="我知道了"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_36"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

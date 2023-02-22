@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.youth.banner.indicator.RectangleIndicator
+        android:id="@+id/first_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/dp_24" />
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_240"
+        android:layout_margin="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_30"
+        app:banner_indicator_height="@dimen/dp_8"
+        app:banner_indicator_normal_color="@color/white30"
+        app:banner_indicator_radius="@dimen/dp_4"
+        app:banner_indicator_selected_color="@color/white80"
+        app:banner_indicator_selected_width="@dimen/dp_24"
+        app:banner_indicator_space="@dimen/dp_8" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/first_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="4"
+        tools:listitem="@layout/item_first_grid" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/F7FAFF"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_24">
+
+        <ViewStub
+            android:id="@+id/fragment_first_in_todo_vs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_160"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout="@layout/fragment_first_in_todo" />
+
+        <ViewStub
+            android:id="@+id/fragment_first_in_re"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24"
+            android:layout="@layout/fragment_first_in_recommend" />
+
+        <ViewStub
+            android:id="@+id/fragment_first_in_ac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24"
+            android:background="@color/white"
+            android:layout="@layout/fragment_first_in_activity" />
+
+        <ViewStub
+            android:id="@+id/fragment_first_in_web"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24"
+            android:layout="@layout/fragment_first_in_web" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

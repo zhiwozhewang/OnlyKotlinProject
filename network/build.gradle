@@ -1,0 +1,8 @@
+apply from:"../basic.gradle"
+
+def netDependencies = rootProject.ext.NetworkDepend
+
+dependencies {
+    netDependencies.each { k, v -> api v }
+    api(project.ThirdDepend.toast)
+}

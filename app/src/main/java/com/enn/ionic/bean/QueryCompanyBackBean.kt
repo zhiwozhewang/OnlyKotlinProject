@@ -1,0 +1,33 @@
+package com.enn.ionic.bean
+
+data class QueryCompanyBackBean(
+    val address: String,
+    val addressNo: Any,
+    val applyBindingTimestamp: Long,
+    val bindType: String,
+    val bp: String,
+    val createTime: Long,
+    val createUserId: Int,
+    val employeecode: Any,
+    val enableStatusId: Int,
+    val icLoginId: Int,
+    val id: Int,
+    val imgId: Any,
+    var isCurrent: Int,
+    val isDeleted: Int,
+    val isFiled: Int,
+    val isLogin: Int,
+    val isMaster: Int,
+    val isVisible: Int,
+    val itcode: Any,
+    val job: String,
+    val name: String,
+    val partment: String,
+    val registType: Any,
+    val reviewStatus: Int,
+    val roleId: Int,
+    val tel: String,
+    val updateTime: Long,
+    val updateUserId: Int,
+    val username: String
+)

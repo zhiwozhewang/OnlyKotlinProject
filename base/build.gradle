@@ -1,0 +1,19 @@
+apply from: "../basic.gradle"
+
+dependencies {
+    implementation project(path: ':network')
+    api(project.ThirdDepend.mmkv)
+    api(project.ThirdDepend.dialog)
+    api(project.ThirdDepend.dialogXStyle)
+
+    api(project.Refresh.refresh)
+    api(project.Refresh.header)
+    api(project.Refresh.footer)
+    api(project.Refresh.refresh_google)
+
+    api(project.ThirdDepend.autoSize)
+    api(project.GoogleDepend.datastore)
+    api(project.AppPay.pay_ali)
+
+}
+

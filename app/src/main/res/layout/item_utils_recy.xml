@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_utils_recy_li"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/item_utils_recy_im"
+        android:layout_width="@dimen/dp_52"
+        android:layout_height="@dimen/dp_52"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_16"
+        android:clickable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_utils_recy_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_19"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:clickable="false"
+        android:gravity="center_horizontal|top"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_utils_recy_im" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/item_utils_recy_im_right_layer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:visibility="gone"
+        app:constraint_referenced_ids="item_utils_recy_im_right,item_utils_recy_view_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/item_utils_recy_view_right"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_utils_recy_im_right"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:layout_gravity="right|top"
+        android:layout_marginStart="@dimen/dp_36"
+        android:layout_marginBottom="@dimen/dp_36"
+        android:background="@mipmap/im_utils_add"
+        android:padding="@dimen/dp_10"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/item_utils_recy_im"
+        app:layout_constraintStart_toStartOf="@+id/item_utils_recy_im" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

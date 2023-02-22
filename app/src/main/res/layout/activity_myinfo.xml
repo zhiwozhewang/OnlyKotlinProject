@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/F7FAFF">
+
+    <ImageView
+        android:id="@+id/myinfo_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_411"
+        android:background="@mipmap/im_mine_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/myinfo_back"
+        android:layout_width="@dimen/dp_88"
+        android:layout_height="@dimen/dp_88"
+        android:layout_marginTop="@dimen/dp_100"
+        android:background="@mipmap/im_login_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- 短信登录 -->
+    <TextView
+        android:id="@+id/myinfo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="个人信息"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_36"
+        app:layout_constraintBottom_toBottomOf="@+id/myinfo_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myinfo_back" />
+
+    <ImageView
+        android:id="@+id/myinfo_head"
+        android:layout_width="@dimen/dp_140"
+        android:layout_height="@dimen/dp_140"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:src="@mipmap/im_mine_head"
+        app:layout_constraintBottom_toBottomOf="@+id/myinfo_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myinfo_view" />
+
+    <TextView
+        android:id="@+id/myinfo_head_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:text="修改头像"
+        android:textColor="@color/color_0473FF"
+        android:textSize="@dimen/sp_32"
+        app:layout_constraintEnd_toEndOf="@+id/myinfo_head"
+        app:layout_constraintStart_toStartOf="@+id/myinfo_head"
+        app:layout_constraintTop_toBottomOf="@+id/myinfo_head" />
+
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/myinfo_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_72"
+        android:layout_marginRight="@dimen/dp_12"
+        android:background="@mipmap/im_info_bg"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_12"
+        app:constraint_referenced_ids="myinfo_username,myinfo_job,myinfo_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myinfo_head_text" />
+
+    <com.enn.ionic.ui.view.MineItemView
+        android:id="@+id/myinfo_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_72"
+        android:layout_marginRight="@dimen/dp_24"
+        app:itemize_leftImage="@mipmap/im_info_username"
+        app:itemize_line_isshow="true"
+        app:itemize_rightText_color="@color/color_666666"
+        app:itemize_rightText_size="@dimen/sp_28"
+        app:itemize_text="用户名"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myinfo_head_text" />
+
+    <com.enn.ionic.ui.view.MineItemView
+        android:id="@+id/myinfo_job"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginRight="@dimen/dp_24"
+        app:itemize_leftImage="@mipmap/im_info_job"
+        app:itemize_line_isshow="true"
+        app:itemize_rightText_color="@color/color_666666"
+        app:itemize_text="职务"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myinfo_username" />
+
+    <com.enn.ionic.ui.view.MineItemView
+        android:id="@+id/myinfo_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginRight="@dimen/dp_24"
+        app:itemize_leftImage="@mipmap/im_info_phone"
+        app:itemize_rightImage_isshow="false"
+        app:itemize_rightText_color="@color/color_666666"
+        app:itemize_text="登录账号"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myinfo_job" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

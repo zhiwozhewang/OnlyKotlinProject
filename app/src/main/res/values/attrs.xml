@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--自定义我的页面item属性-->
+    <declare-styleable name="ItemMine">
+        <attr name="itemize_text" format="string" />
+        <attr name="itemize_leftImage" format="reference" />
+        <attr name="itemize_rightImage" format="reference" />
+        <attr name="itemize_rightImage_isshow" format="boolean" />
+        <attr name="itemize_rightNum_isshow" format="boolean" />
+        <attr name="itemize_rightNum" format="string" />
+        <attr name="itemize_leftImage_isshow" format="boolean" />
+        <attr name="itemize_rightText" format="string" />
+        <attr name="itemize_rightText_color" format="color" />
+        <attr name="itemize_rightText_size" format="reference" />
+        <attr name="itemize_background" format="reference|color" />
+        <attr name="itemize_line_isshow" format="boolean" />
+
+    </declare-styleable>
+</resources>

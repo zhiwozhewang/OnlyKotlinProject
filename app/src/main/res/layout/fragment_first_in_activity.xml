@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_32"
+        android:paddingBottom="@dimen/dp_32">
+
+        <TextView
+            android:id="@+id/ac_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="活动专区"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_32" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/ac_im"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_210"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/im_first_party" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ac_recy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"></androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

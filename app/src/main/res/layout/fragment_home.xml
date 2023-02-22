@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintBottom_toTopOf="@+id/tabs"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/home_login_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="home_login_view,home_login_im,home_login_im_text,home_login_btn" />
+
+    <View
+        android:id="@+id/home_login_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_88"
+        android:layout_margin="@dimen/dp_24"
+        android:background="@drawable/bg_home_login"
+        app:layout_constraintBottom_toTopOf="@+id/tabs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/home_login_im"
+        android:layout_width="@dimen/dp_36"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginStart="@dimen/dp_24"
+        android:src="@mipmap/im_home_login_left"
+        app:layout_constraintBottom_toBottomOf="@+id/home_login_view"
+        app:layout_constraintStart_toStartOf="@+id/home_login_view"
+        app:layout_constraintTop_toTopOf="@+id/home_login_view" />
+
+    <TextView
+        android:id="@+id/home_login_im_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:text="登录获取更多专享服务"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_28"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/home_login_im"
+        app:layout_constraintStart_toEndOf="@+id/home_login_im"
+        app:layout_constraintTop_toTopOf="@+id/home_login_im" />
+
+    <TextView
+        android:id="@+id/home_login_btn"
+        android:layout_width="@dimen/dp_144"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:background="@mipmap/im_home_login"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/home_login_view"
+        app:layout_constraintEnd_toEndOf="@+id/home_login_view"
+        app:layout_constraintTop_toTopOf="@+id/home_login_view" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tabIndicatorHeight="@dimen/dp_0"
+        app:tabSelectedTextColor="@color/color_0473FF"
+        app:tabTextAppearance="@style/MyTab_Style"
+        app:tabTextColor="@color/color_999999" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
